@@ -1,0 +1,89 @@
+import * as React from 'react';
+import { Image, Text, View, StyleSheet, ScrollView } from 'react-native';
+import Constants from 'expo-constants';
+
+
+// You can import from local files
+import AssetExample from './components/AssetExample';
+
+// or any pure javascript modules available in npm
+import { Card } from 'react-native-paper';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+         <ScrollView>
+      <Text style={styles.texto}> Alarme                                         ⋮</Text>
+         </ScrollView>
+      <Text style={styles.text}>☀️ Acordar </Text>
+      <button style={styles.butao}>05:30 <br /> seg., ter., qua., qui., sex.</button>
+      <Text style={styles.text}>      Outros </Text>
+       <button style={styles.butaom}>05:45 <br /> Não programado </button>
+       <button style={styles.butaom}>05:50 <br /> Não programado</button>
+       <button style={styles.butaom}>07:00 <br /> Não programado </button>
+       <button style={styles.butaom}>07:30 <br /> Não programado </button>
+       <button style={styles.butaom}>08:00 <br /> Não programado</button>
+       <br styles={styles.br} />
+
+       <Image style={styles.imagem} source={{src: 'botaoazul' }} />
+       <ScrollView>
+       <Text style={styles.emotes}> ⏰     🕒        ⌛         ⏱️         🛏️  </Text>
+       <Text style={styles.textoo}> Alarme  Relógio  Timer, Cronômetro  Dormir </Text>
+       </ScrollView>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#36454F',
+  },
+  emotes: {
+    color: '#FFFFF0',
+    backgroundColor: '#818589',
+    textAlign: 'center' 
+  },
+  textoo: {
+    color: '#FFFFF0',
+    backgroundColor: '#818589',
+    fontSize: 12,
+    padding: 8,
+    textAlign: 'center'
+  },
+  texto: {
+    color: '#FFFFF0',
+    backgroundColor: '#36454F',
+    fontSize: 20,
+    padding: 8,
+  },
+  text: {
+    paddingTop: Constants.statusBarHeight,
+    color: '#FFFFF0',
+    fontSize: 15,
+    padding: 5,
+  },
+  butao: {
+    flex: 1,
+    justifyContent: 'left',
+    backgroundColor: '#818589',
+    color: '#FFFFF0',
+    padding:14,
+    width: 300,
+    borderRadius: 12,
+    fontSize: 20,
+    textAlign: 'left',
+  },
+  butaom: {
+    flex: 1,
+    backgroundColor: '#818589',
+    color: '#E9DCC9',
+    padding:14,
+    width: 300,
+    borderRadius: 12,
+    fontSize: 20,
+    textAlign: 'left',
+  },
+ imagem: {
+   alignItems: 'bottom'
+ },
+});
