@@ -1,0 +1,86 @@
+import * as React from 'react';
+import { Text, View, StyleSheet, ScrollView, } from 'react-native';
+import Constants from 'expo-constants';
+
+// You can import from local files
+import AssetExample from './components/AssetExample';
+
+// or any pure javascript modules available in npm
+import { Card } from 'react-native-paper';
+
+export default function App() {
+  return (
+  <View style={styles.container}>
+    <ScrollView>
+     <Text style={styles.dormes}> Cronômetro                                 ⋮</Text>
+     </ScrollView>
+     <button style={styles.hour}> 00h 00m </button>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+     <button style={styles.hourly}>►</button>
+      <br />
+      <br />
+      <br />
+      <ScrollView>
+       <Text style={styles.emotes}> ⏰     🕒        ⌛         ⏱️         🛏️  </Text>
+       <Text style={styles.texto}> Alarme  Relógio  Timer, Cronômetro  Dormir </Text>
+       </ScrollView>
+  </View>
+  );
+}
+
+const styles = StyleSheet.create({
+    dormes: {
+    color: '#FFFFF0',
+    backgroundColor: '#202020',
+    fontSize: 20,
+    padding: 8,
+  },
+  //
+  hour: {
+    height: 200,  
+    width: 200,
+    fontSize: '2em',
+    borderRadius: '100%',
+    borderColor: '#DCDCDC',
+    backgroundColor: '#202020',
+    color: '#FFFFF0',
+  },
+    hourly: {
+    height: 80,  
+    width: 80,
+    fontSize: '2em',
+    fontWeight: 'bold',
+    borderRadius: '50%',
+    borderColor: '#4169E1',
+    backgroundColor: '#87CEFA',
+    color: '#4169E1',
+    },
+  //
+    container: {
+    flex: 1,
+    justifyContent: 'top',
+    borderRadius: 8,
+    backgroundColor: '#202020',
+    padding: 8,
+    alignItems: 'center',
+  },
+
+//rodapé
+  emotes: {
+    paddingTop: 8,
+    color: '#FFFFF0',
+    backgroundColor: '#36454F',
+    textAlign: 'center',
+  },
+  texto: {
+    color: '#FFFFF0',
+    backgroundColor: '#36454F',
+    fontSize: 12,
+    padding: 8,
+    textAlign: 'center',
+  },
+})
