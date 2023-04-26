@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, ScrollView, } from 'react-native';
 import Constants from 'expo-constants';
 
 // You can import from local files
@@ -10,65 +10,114 @@ import { Card } from 'react-native-paper';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-     <Text style={styles.texto}> Relógio                                     ⋮</Text>
-      <Text style={styles.hour}> 10:30 </Text>
-      <Text style={styles.text}> seg., 24 de abr. ter., 05:30</Text>
-      <br />
-      <Text style={styles.hourly}> Brasília‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 10:30</Text>
-      <br />
-      <Text style={styles.hourly}> Cassina de' Pecchi ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 15:30 </Text>
-      <br />
-      <Text style={styles.hourly}> Milano ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎15:30 </Text>
-      <br />
-      <br />
-      <br />
-      <br />  
+  <View style={styles.container}>
+    <ScrollView>
+     <Text style={styles.dormes}> Relógio                                        ⋮</Text>
+     </ScrollView>
+   <button style={styles.horario}>
+      <Text style={styles.hour}>10:30</Text> <br />
+      <Text style={styles.escrita}>  seg., 24 de abr. ter., 05:30</Text>
+   </button>
+   <br />
+   <br />
+   <button style={styles.horarioTwo}>
+   <text style={styles.escritaTwo}> Brasília‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎</text>
+   <text style={styles.hourTwo}> 10:30</text>
+    </button>
+       <br />
+    <button style={styles.horarioTwo}>
+      <text style={styles.escritaTwo}> Cassina de' Pecchi ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </text>
+      <text style={styles.hourTwo}> 15:30 </text>
+    </button>
+    <br />
+    <button style={styles.horarioTwo}>
+      <text style={styles.escritaTwo}> Milano ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎</text>
+      <text style={styles.hourTwo}> 15:30 </text>
+   </button>
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   
       <ScrollView>
        <Text style={styles.emotes}> ⏰     🕒        ⌛         ⏱️         🛏️  </Text>
-       <Text style={styles.textoo}> Alarme  Relógio  Timer, Cronômetro  Dormir </Text>
+       <Text style={styles.texto}> Alarme  Relógio  Timer, Cronômetro  Dormir </Text>
        </ScrollView>
-    </View>
+  </View>
   );
 }
 
 const styles = StyleSheet.create({
-  emotes: {
+    dormes: {
     color: '#FFFFF0',
-    backgroundColor: '#818589',
-    textAlign: 'center' 
-  },
-  hour: {
-    fontSize: 45,
-    color: '#FFFFF0',
-  },
-  hourly: {
-    color: '#FFFFF0',
-    backgroundColor: '#71797E',
-    padding: 24,
-    borderRadius: 12
-  },
-   text: {
-    color: '#FFFFF0',
-  },
-    texto: {
-    color: '#FFFFF0',
-    backgroundColor: '#36454F',
+    backgroundColor: '#202020',
     fontSize: 20,
     padding: 8,
   },
-  textoo: {
+  //
+    horarioTwo: {
+      textAlign: 'left',
+      border: 2,
+      borderRadius: 10,
+      backgroundColor: '#36454F', 
+      padding: 15,
+    },
+    horario: {
+      textAlign: 'left',
+      border: 2,
+      borderRadius: 10,
+      backgroundColor: '#202020', 
+      padding: 15,
+    },
+escrita: {
+  color: '#FFFFF0'
+},
+escritaTwo: {
+  color: '#FFFFF0',
+  fontSize: 15,
+},
+escritaThree: {
+  color: '#808080',
+},
+hour: {
+  fontSize: 50,
+  color: '#FFFFF0',
+},
+hourTwo: {
+  fontSize: 20,
+  color: '#FFFFF0'
+},
+  //
+    container: {
+    flex: 1,
+    justifyContent: 'top',
+    borderRadius: 8,
+    backgroundColor: '#202020',
+    padding: 8,
+  },
+
+//rodapé
+  emotes: {
+    paddingTop: 8,
     color: '#FFFFF0',
-    backgroundColor: '#818589',
+    backgroundColor: '#36454F',
+    textAlign: 'center' 
+  },
+  texto: {
+    color: '#FFFFF0',
+    backgroundColor: '#36454F',
     fontSize: 12,
     padding: 8,
     textAlign: 'center'
   },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
- 
-    backgroundColor: '#36454F',
-    padding: 8,
-  },
-});
+})
