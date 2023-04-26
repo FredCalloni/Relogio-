@@ -1,0 +1,91 @@
+import * as React from 'react';
+import { Text, View, StyleSheet, ScrollView, } from 'react-native';
+import Constants from 'expo-constants';
+
+// You can import from local files
+import AssetExample from './components/AssetExample';
+
+// or any pure javascript modules available in npm
+import { Card } from 'react-native-paper';
+
+export default function App() {
+  return (
+  <View style={styles.container}>
+    <ScrollView>
+     <Text style={styles.dormes}> Dormir                                        ⋮</Text>
+     </ScrollView>
+   <button style={styles.horario}>
+      <Text style={styles.escrita}> Horário programado:</Text> <br />
+      <Text style={styles.escritaTwo}>               DORMIR                       ACORDAR </Text> <br />
+      <Text style={styles.hour}> 22:00 05:30</Text> <br />
+      <Text style={styles.escritaTwo}>            7H 30min - Próximo alarme: quinta-feira</Text>
+   </button>
+   <br />
+   <br />
+   <button style={styles.horario}>
+      <Text style={styles.escrita}> Ouvir sons para dormir </Text> <br />
+      <Text style={styles.escritaThree}>Ouça músicas tranquilas para pegar no sono com mais facilidade. Os sons para dormir não são tocados automaticamente. </Text>
+   </button>
+   <br />
+   <br />
+      <ScrollView>
+       <Text style={styles.emotes}> ⏰     🕒        ⌛         ⏱️         🛏️  </Text>
+       <Text style={styles.texto}> Alarme  Relógio  Timer, Cronômetro  Dormir </Text>
+       </ScrollView>
+  </View>
+  );
+}
+
+const styles = StyleSheet.create({
+    dormes: {
+    color: '#FFFFF0',
+    backgroundColor: '#202020',
+    fontSize: 20,
+    padding: 8,
+  },
+  //
+    horario: {
+      textAlign: 'left',
+      border: 2,
+      borderRadius: 10,
+      backgroundColor: '#36454F', 
+      padding: 15,
+    },
+escrita: {
+  color: '#FFFFF0'
+},
+escritaTwo: {
+  color: '#808080',
+  fontSize: 12,
+},
+escritaThree: {
+  color: '#808080',
+},
+hour: {
+  fontSize: 50,
+  color: '#FFFFF0'
+},
+  //
+    container: {
+    flex: 1,
+    justifyContent: 'top',
+    borderRadius: 8,
+    backgroundColor: '#202020',
+    padding: 8,
+  },
+
+//rodapé
+  emotes: {
+    paddingTop: 8,
+    color: '#FFFFF0',
+    backgroundColor: '#36454F',
+    textAlign: 'center' 
+  },
+  texto: {
+    color: '#FFFFF0',
+    backgroundColor: '#36454F',
+    fontSize: 12,
+    padding: 8,
+    textAlign: 'center'
+  },
+})
