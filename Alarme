@@ -18,10 +18,15 @@ export default function App() {
       <Text style={styles.text}>☀️ Acordar </Text>
       <button style={styles.butao}>05:30 <br /> seg., ter., qua., qui., sex.</button>
       <Text style={styles.text}>      Outros </Text>
+      <br />
        <button style={styles.butaom}>05:45 <br /> Não programado </button>
+       <br />
        <button style={styles.butaom}>05:50 <br /> Não programado</button>
+       <br />
        <button style={styles.butaom}>07:00 <br /> Não programado </button>
+       <br />
        <button style={styles.butaom}>07:30 <br /> Não programado </button>
+       <br />
        <button style={styles.butaom}>08:00 <br /> Não programado</button>
        <br styles={styles.br} />
 
@@ -36,26 +41,31 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#36454F',
+    backgroundColor: '#202020',
   },
+    texto: {
+    color: '#FFFFF0',
+    backgroundColor: '#202020',
+    fontSize: 20,
+    padding: 8,
+  },
+  //
+
   emotes: {
     color: '#FFFFF0',
-    backgroundColor: '#818589',
-    textAlign: 'center' 
+    backgroundColor: '#36454F',
+    textAlign: 'center',
+    paddingTop: 8,
   },
   textoo: {
     color: '#FFFFF0',
-    backgroundColor: '#818589',
+    backgroundColor: '#36454F',
     fontSize: 12,
     padding: 8,
     textAlign: 'center'
   },
-  texto: {
-    color: '#FFFFF0',
-    backgroundColor: '#36454F',
-    fontSize: 20,
-    padding: 8,
-  },
+  //
+
   text: {
     paddingTop: Constants.statusBarHeight,
     color: '#FFFFF0',
@@ -65,24 +75,28 @@ const styles = StyleSheet.create({
   butao: {
     flex: 1,
     justifyContent: 'left',
-    backgroundColor: '#818589',
+    backgroundColor: '#36454F',
     color: '#FFFFF0',
     padding:14,
     width: 300,
     borderRadius: 12,
+    border: 2,
     fontSize: 20,
     textAlign: 'left',
   },
   butaom: {
     flex: 1,
-    backgroundColor: '#818589',
+    backgroundColor: '#36454F',
     color: '#E9DCC9',
     padding:14,
     width: 300,
     borderRadius: 12,
+    border: 2,
     fontSize: 20,
     textAlign: 'left',
   },
+  //
+
  imagem: {
    alignItems: 'bottom'
  },
